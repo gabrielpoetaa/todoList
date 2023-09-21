@@ -9,7 +9,11 @@ const app = express();
 // const todoList = ['']
 // const todoListWork = ['']
 
-mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://<your-username>:<your-password>@cluster0.kmy4vpe.mongodb.net/todolistDB").then(
+  app.listen(process.env.PORT || 3000, function() {
+    console.log("Server started on port 3000");
+  })
+);
 
 const itemsSchema = new mongoose.Schema({
   name: String,
@@ -128,10 +132,10 @@ app.post("/delete", (req, res) => {
 // let port = process.env.PORT;
 // if (port == null || port == "") {
 //   port = 3000;
-// }
-app.listen(process.env.PORT || 3000, function() {
-  console.log('Server listening on port 3000');
+// // }
+// app.listen(process.env.PORT || 3000, function() {
+//   console.log('Server listening on port 3000');
   
-  });
+//   });
   
   
