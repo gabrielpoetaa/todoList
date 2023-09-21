@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
 const app = express();
-// const port = 3000;
+const port = 31536;
 
 
 // const todoList = ['']
@@ -129,7 +129,7 @@ app.post("/delete", (req, res) => {
 // if (port == null || port == "") {
 //   port = 3000;
 // }
-let port = process.env.PORT;
+// let port = process.env.PORT;
 
 
 app.listen(port, function(){
