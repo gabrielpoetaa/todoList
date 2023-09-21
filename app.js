@@ -10,7 +10,7 @@ let port = process.env.PORT;
 // const todoList = ['']
 // const todoListWork = ['']
 
-mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB");
+mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const itemsSchema = new mongoose.Schema({
   name: String,
@@ -132,6 +132,6 @@ if (port == null || port == "") {
 }
 
 
-app.listen(port, () => {
-  console.log(`Server has been started successfully`);
-});
+app.listen(port, function(){
+  console.log("Server started succesfully!")
+})
