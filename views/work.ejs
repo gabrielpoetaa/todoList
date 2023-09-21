@@ -1,0 +1,69 @@
+<%- include("partials/header.ejs") %>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <form action="/work" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="todo" id="todo" placeholder="Insert your todo">
+                </div>
+                <div class="form">
+
+                    <div class="buttonContainer">
+                        <button type="submit" class="btn btn-1 btn my-3">
+                            <svg>
+                                <rect x="0" y="0" fill="none" width="100%" height="100%" />
+                            </svg>
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="content">
+                <% if(locals.newTodo){ %>
+                    <% for(let i=1; i<newTodo.length;i++){ %>
+
+                        <ul>
+                            <div class="form-group ">
+                                <div class="col-md-5">
+
+                                </div>
+                            </div>
+                            <li class="lista">
+                                <div class="checkbox">
+                                    <input type="checkbox" class="delete" />
+                                    <label class="strikethrough">
+                                        <%= newTodo[i] %>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <%}%>
+                            <% } %>
+            </div>
+        </div>
+        <div>
+            <%- include("partials/footer.ejs") %>
+
+        </div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+
+    </html>
