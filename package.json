@@ -4,13 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "start",
-    "start": "serve -s build",
-    "build": "build",
-    "test": "test --env=jsdom",
-    "eject": " eject",
-    "heroku-postbuild": "npm run build"
-    },
+    "start": "node app.js"
+  },
   "type": "module",
   "keywords": [],
   "author": "",
