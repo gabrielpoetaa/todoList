@@ -129,9 +129,9 @@ app.post("/delete", (req, res) => {
 // if (port == null || port == "") {
 //   port = 3000;
 // }
-let port = process.env.PORT;
-
-
-app.listen(port, function(){
-  console.log("Server started succesfully!")
-})
+app.listen(process.env.PORT || 3000, function() {
+  console.log('Server listening on port 3000');
+  
+  });
+  
+  
