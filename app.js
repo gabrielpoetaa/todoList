@@ -3,17 +3,13 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
 const app = express();
-// const port = 3000;
+const port = 3000;
 
 
 // const todoList = ['']
 // const todoListWork = ['']
 
-mongoose.connect("mongodb+srv://<your-username>:<your-password>@cluster0.kmy4vpe.mongodb.net/todolistDB").then(
-  app.listen(process.env.PORT || 3000, function() {
-    console.log("Server started on port 3000");
-  })
-);
+mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const itemsSchema = new mongoose.Schema({
   name: String,
@@ -129,13 +125,6 @@ app.post("/delete", (req, res) => {
 
 });
 
-// let port = process.env.PORT;
-// if (port == null || port == "") {
-//   port = 3000;
-// // }
-// app.listen(process.env.PORT || 3000, function() {
-//   console.log('Server listening on port 3000');
-  
-//   });
-  
-  
+app.listen(port, function(){
+  console.log("Server started succesfully!")
+})
