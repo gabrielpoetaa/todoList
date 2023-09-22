@@ -9,7 +9,7 @@ const app = express();
 // const todoList = ['']
 // const todoListWork = ['']
 
-mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true});
+await mongoose.connect("mongodb+srv://admin-gabriel:test123@cluster0.byxftyz.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 const itemsSchema = new mongoose.Schema({
   name: String,
